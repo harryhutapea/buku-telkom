@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&family=Oswald:wght@200..700&display=swap');
+
+.stroke-text {
+    -webkit-text-stroke: 1px rgb(82,82,82);
+}
+
+/* @font-face {
+    font-family: 'Nabla';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nabla Regular'), url('Nabla[EDPT,EHLT].woff') format('woff');
+    } */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* * {
+    border: 0.1px solid green;
+} */
