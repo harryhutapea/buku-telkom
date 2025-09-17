@@ -11,12 +11,23 @@
     src: local('Nabla Regular'), url('Nabla[EDPT,EHLT].woff') format('woff');
     } */
 
-body {
-    margin: 0;
-    padding: 0;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 
-/* * {
-    border: 0.1px solid green;
-} */
+* {
+    box-sizing: border-box;
+}
+
+
+.bg-full {
+    background-image: url('images/telkom_logo.png');
+}
+
+.b {
+    overflow: hidden;
+    /* background-image: url('../images/telkom-bg.png'); */
+}
