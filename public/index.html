@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Buku Telkom</title>
 </head>
-<body class="bg-cover bg-center bg-fixed b">
+<body>
     <div class="h-screen flex flex-col">
-        <nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white">
-            <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px]">
+        <nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white fixed right-0 left-0">
+            <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
                 <div class="w-20">
                     <img src="images/telkom_logo.png" alt="" class="w-full h-full">
                 </div>
@@ -19,21 +19,30 @@
                     <p class="text-[rgb(136,137,136)] text-7xl font-[oswald] stroke-text">BU<span class="text-[rgb(182,8,17)]">TEL</span></p>
                 </div>
             </div>
+
+            <div class="flex items-center justify-between mr-[20px] w-[150px]">
+                <a
+                    class="inline-block rounded-full border border-[rgb(182,8,17)] px-[10px] py-[4px] font-[Ntr]"
+                    href="pages/login.html"
+                >Login</a>
+                <a
+                    class="inline-block rounded-full border border-transparent bg-[rgb(182,8,17)] px-[10px] py-[4px] text-white font-[Ntr]"
+                    href="#"
+                >Sign Up</a>
+            </div>
         </nav>
 
 
-        <div>
-            <div class="bg-[#EB2028] rounded-[20px] inline-block ">
-                <img src="images/Gambar Buku.png" alt="" class="w-[200px] px-[18px] py-[14px]">
-                <div class="inline-block bg-white rounded-full">
-                    <p class="text-[#EB2028] text-2xl font-[Ntr]">Buku Telkom</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[84px] my-[20px] mx-[20px] mt-[120px]">
+            <div class="bg-[#EB2028] rounded-[20px] flex flex-1 flex-col items-center shadow-2xl">
+                <img src="images/Gambar Buku.png" alt="" class="w-[200px] px-[18px] py-[18px]">
+                <div class="inline-block bg-white rounded-md my-[14px]">
+                    <p class="text-[#EB2028] text-2xl font-[Ntr] px-[15px]">DETAIL</p>
                 </div>
             </div>
-            <form action="#">
-                <button type="submit" class="bg-[rgb(182,8,17)] rounded-full px-[10px] py-[4px] text-white font-[Ntr] shadow-md">
-                    Pinjam
-                </button>
-            </form>
+
+
+
         </div>
     </div>
 </body>
