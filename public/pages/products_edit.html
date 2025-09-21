@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/public/images/butel-logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Buku Telkom</title>
+</head>
+
+<body class="">
+    <div class="h-screen flex flex-col">
+        <nav
+            class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0">
+            <a href="/public/index.html">
+                <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
+                    <div class="w-20">
+                        <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
+                    </div>
+                    <div>
+                        <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span
+                                class="text-[var(--secondary-red)]">TEL</span></p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="flex items-center justify-between mr-[20px] w-[150px]">
+                <p
+                    class="inline-block rounded-full border border-[var(--secondary-red)] p-[6px] font-[Ntr] bg-[var(--secondary-red)] cursor-pointer">
+                    <img src="/public/images/profile.png" alt="" class="w-[30px] h-[30px]">
+                </p>
+                <p
+                    class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr] cursor-pointer">
+                    Log Out</p>
+            </div>
+        </nav>
+
+        <div class="flex flex-row h-full">
+            <!-- bagian kiri -->
+            <div class="h-full w-[25%] flex justify-center items-center">
+                <div
+                    class="w-[75%] bg-[var(--primary-red)] h-[80%] rounded-xl shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] font-[Ntr] text-white flex items-center flex-col p-4 text-lg">
+                    <img src="/public/images/Gambar Buku.png" alt=""
+                        class="h-[50%] w-[50%] border-[5px] border-white rounded-xl">
+                    <div
+                        class="bg-[var(--secondary-red)] w-full h-[45px] mt-4 rounded-full flex justify-center items-center">
+                        <p class="font-[Ntr]">Change Book Cover</p>
+                        <button class="bg-white rounded-full ml-2" type="button">
+                            <img src="/public/images/upload_icon.png" alt="" class=" p-1 size-8">
+                            <b class="hidden">u</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- bagian kanan -->
+            <div class="h-full w-[75%] flex justify-center items-center">
+                <!-- isi konten -->
+                <form action="#" method="POST"
+                    class="grid grid-cols-4 my-4 py-4 font-[Ntr] gap-5 px-5 text-xl w-[90%] h-[80%] bg-[var(--secondary-red)] rounded-xl shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)]">
+
+                    <label for="judul" class="text-white col-span-1">Judul Buku:</label>
+                    <input id="judul" name="judul" type="text"
+                        class="bg-white rounded-full text-[var(--primary-red)] focus:outline-none font-bold pl-4 col-span-3"
+                        value="ADMINISTRASI FARMASI untuk SMK/MAK Kelas XII (K-MERDEKA REVISI)">
+
+                    <label for="kode" class="text-white col-span-1">Kode Produk:</label>
+                    <input id="kode" name="kode" type="text"
+                        class="bg-white rounded-full text-[var(--primary-red)] focus:outline-none font-bold pl-4 col-span-3"
+                        value="0056100240">
+
+                    <label for="penulis" class="text-white col-span-1">Penulis:</label>
+                    <input id="penulis" name="penulis" type="text"
+                        class="bg-white rounded-full text-[var(--primary-red)] focus:outline-none font-bold pl-4 col-span-3"
+                        value="Suciati | Erlien Lusy W. Widija Prastijanti S.">
+
+                    <label for="tahun" class="text-white col-span-1">Tahun Terbit:</label>
+                    <input id="tahun" name="tahun" type="text"
+                        class="bg-white rounded-full text-[var(--primary-red)] focus:outline-none font-bold pl-4 col-span-3"
+                        value="2025">
+
+                    <label for="kategori" class="text-white col-span-1">Kategori:</label>
+                    <input id="kategori" name="kategori" type="text"
+                        class="bg-white rounded-full text-[var(--primary-red)] focus:outline-none font-bold pl-4 col-span-3"
+                        value="Apoteker">
+
+                    <button type="submit"
+                        class="col-span-4 bg-white shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] font-[Ntr] text-[var(--primary-red)] rounded-md w-[150px] h-[50px] font-bold">
+                        APPLY
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
