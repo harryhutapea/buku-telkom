@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/public/images/butel-logo.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <title>Buku Telkom</title>
+</head>
+
+<body class="">
+  <div class="h-screen flex flex-col">
+    <nav
+      class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0">
+      <a href="/public/index.html">
+        <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px]">
+          <div class="w-20">
+            <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
+          </div>
+          <div>
+            <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">
+              BU<span class="text-[var(--secondary-red)]">TEL</span>
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center justify-between mr-[20px] w-[150px]">
+        <a class="inline-block rounded-full border border-[var(--secondary-red)] px-[10px] py-[4px] font-[Ntr]"
+          href="/public/pages/login.html">Login</a>
+        <a class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr]"
+          href="/public/pages/sign_up.html">Sign Up</a>
+      </div>
+    </nav>
+
+    <div class="flex flex-row h-full">
+      <div class="background-detail">
+        <img src="/public/images/cover-contoh.png" alt="gambar cover buku" class="w-[50%] h-[50%] object-contain">
+      </div>
+      <div class="flex-1 flex justify-center items-center">
+        <div
+          class="bg-white border-[var(--secondary-red)] w-[85%] h-[85%] rounded-xl shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] border-[4px] p-6 flex justify-between flex-col">
+          <div>
+            <h1 class="font-[Ntr] text-3xl">
+              <b>ADMINISTRASI FARMASI untuk SMK/MAK Kelas XII (K-MERDEKA
+                REVISI)</b>
+            </h1>
+            <p class="font-[Ntr] text-2xl">Kode Produk: 0056100240</p>
+            <p class="font-[Ntr] text-2xl">
+              Penulis: Suciati | Erlien Lusy W. Widija Prastijanti S.
+            </p>
+            <p class="font-[Ntr] text-2xl">Tahun Terbit: 2025</p>
+          </div>
+          <div class="w-full flex justify-center">
+            <button type="button" class="bg-[var(--primary-red)] rounded-xl text-white px-4 py-4 font-[Ntr]"
+              onclick="openOverlay()">
+              <b>PINJAM BUKU</b>
+            </button>
+            <div id="overlay" class="fixed inset-0 bg-[rgba(0,0,0,0.7)] hidden flex items-center justify-center z-50">
+              <form id="borrowForm" class="bg-white p-6 rounded-lg shadow-lg w-[85%] flex flex-col justify-between">
+                <h1 class="text-2xl font-[Ntr] text-white bg-[var(--primary-red)] rounded-md inline-block py-1 px-2">
+                  ADMINISTRASI FARMASI untuk SMK/MAK Kelas XII (K-MERDEKA
+                  REVISI)
+                </h1>
+                <div class="flex justify-around">
+                  <img src="/public/images/cover-contoh.png" alt="cover-buku" class="w-[20%] h-[20%] object-contain">
+
+                  <div class="text-left">
+                    <input type="hidden" name="kode_produk" value="0056100240">
+                    <p class="font-[Ntr] text-2xl">Kode Produk: 0056100240</p>
+
+                    <input type="hidden" name="penulis" value="Suciati | Erlien Lusy W. Widija Prastijanti S.">
+                    <p class="font-[Ntr] text-2xl">
+                      Penulis: Suciati | Erlien Lusy W. Widija Prastijanti S.
+                    </p>
+
+                    <input type="hidden" name="tahun_terbit" value="2025">
+                    <p class="font-[Ntr] text-2xl">Tahun Terbit: 2025</p>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <div class="font-[Ntr]">
+                      <h1>Tanggal Peminjaman</h1>
+                      <input type="text" name="tgl_pinjam" readonly
+                        class="bg-[#C7C3C3] text-[#676565] rounded-md border-[3px] border-[#000]" value="21/9/2025">
+                    </div>
+                    <div class="font-[Ntr]">
+                      <h1>Tanggal Pengembalian</h1>
+                      <input type="date" name="tgl_kembali"
+                        class="bg-white border-[3px] border-[#8A8A8A] rounded-md text-black">
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center">
+                  <button type="submit"
+                    class="bg-red-600 text-white px-24 py-2 hover:cursor-pointer rounded-full font-[Ntr]">
+                    <b>SUBMIT</b>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/public/js/main.js"></script>
+</body>
+
+</html>

@@ -4,24 +4,196 @@
     -webkit-text-stroke: 1px rgb(82,82,82);
 }
 
-/* @font-face {
-    font-family: 'Nabla';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Nabla Regular'), url('Nabla[EDPT,EHLT].woff') format('woff');
-    } */
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+:root {
+    --primary-red: #EB2028;
+    --secondary-red: #b60811;
+    --primary-grey: #888988;
+}
+
+.background-full-cover {
+    background-image: url('/public/images/telkom-bg.png');
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Di atas lapisan buram */
+    color: white; /* Warna teks agar mudah dibaca */
+    text-align: center;
+    padding: 20px;
+}
+
+/* book founded */
+/* 
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[84px] my-[20px] mx-[20px] mt-[120px]">
+    <div class="bg-[var(--secondary-red)] rounded-[20px] flex flex-1 flex-col items-center shadow-2xl">
+        <img src="images/Gambar Buku.png" alt="" class="w-[200px] px-[18px] py-[18px] pb-[8px]">
+        <div class="inline-block bg-white rounded-md my-[14px]">
+            <a href="/public/pages/product.html">
+                <strong class="text-[var(--secondary-red)] text-2xl font-[Ntr] px-[15px]">DETAIL</strong>
+            </a>
+        </div>
+    </div>
+</div>
+*/
+
+/* book not found */
+/*
+<div class="flex flex-col justify-between items-center mt-[120px]">
+    <div class="flex justify-center">
+        <img src="/public/images/book_not_found.png" alt="gambar buku tidak ditemukan" class="w-[70%]">
+    </div>
+
+    <div>
+        <p class="text-5xl font-[Ntr] text-[var(--primary-red)]">Maaf, belum ada buku yang terdaftar!</p>
+    </div>
+</div>
+*/
+
+
+.background-detail {
+    position: relative;
+    margin-top: 5px;
+    width: 50%;
+    height: 100%;
+    background-image: url('/public/images/butel-logo.png'); /* Logo Butel */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lapisan hitam transparan */
+.background-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* hitam transparan */
+    filter: blur(5px); /* blur background */
+    z-index: 1;
+}
+
+/* Supaya cover buku muncul di atas overlay */
+.background-detail img {
+    position: relative;
+    z-index: 2;
 }
 
 
+/* navbar jika di index dan belum login
+<nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white fixed right-0 left-0">
+    <a href="/public/index.html">
+        <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
+            <div class="w-20">
+                <img src="images/butel-logo.png" alt="" class="w-full h-full">
+            </div>
+            <div>
+                <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span class="text-[var(--secondary-red)]">TEL</span></p>
+            </div>
+        </div>
+    </a>
+    
+    <div class="flex items-center justify-between mr-[20px] w-[150px]">
+        <a
+            class="inline-block rounded-full border border-[var(--secondary-red)] px-[10px] py-[4px] font-[Ntr]"
+            href="pages/login.html"
+        >Login</a>
+        <a
+            class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr]"
+            href="pages/sign_up.html"
+        >Sign Up</a>
+    </div>
+</nav>
+*/
 
+/* navbar jika di index dan sudah login
+<nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white fixed right-0 left-0">
+            <a href="/public/index.html">
+                <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
+                    <div class="w-20">
+                        <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
+                    </div>
+                    <div>
+                        <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span class="text-[var(--secondary-red)]">TEL</span></p>
+                    </div>
+                </div>
+            </a>
 
-.bg-full {
-    background-image: url('images/telkom_logo.png');
-}
+            <div class="flex items-center justify-between mr-[20px] w-[150px]">
+                <p
+                    class="inline-block rounded-full border border-[var(--secondary-red)] p-[6px] font-[Ntr] bg-[var(--secondary-red)] cursor-pointer"
+                >
+                <img src="/public/images/profile.png" alt="" class="w-[30px] h-[30px]"></p>
+                <p
+                    class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr] cursor-pointer"
+                >Log Out</p>
+            </div>
+        </nav>
+*/
 
+/* navbar jika selain index dan belum login
+<nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0">
+    <a href="/public/index.html">
+        <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
+            <div class="w-20">
+                <img src="images/butel-logo.png" alt="" class="w-full h-full">
+            </div>
+            <div>
+                <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span class="text-[var(--secondary-red)]">TEL</span></p>
+            </div>
+        </div>
+    </a>
+    
+    <div class="flex items-center justify-between mr-[20px] w-[150px]">
+        <a
+            class="inline-block rounded-full border border-[var(--secondary-red)] px-[10px] py-[4px] font-[Ntr]"
+            href="pages/login.html"
+        >Login</a>
+        <a
+            class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr]"
+            href="pages/sign_up.html"
+        >Sign Up</a>
+    </div>
+</nav>
+*/
+
+/* navbar jika selain index dan sudah login
+<nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0">
+            <a href="/public/index.html">
+                <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
+                    <div class="w-20">
+                        <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
+                    </div>
+                    <div>
+                        <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span class="text-[var(--secondary-red)]">TEL</span></p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="flex items-center justify-between mr-[20px] w-[150px]">
+                <p
+                    class="inline-block rounded-full border border-[var(--secondary-red)] p-[6px] font-[Ntr] bg-[var(--secondary-red)] cursor-pointer"
+                >
+                <img src="/public/images/profile.png" alt="" class="w-[30px] h-[30px]"></p>
+                <p
+                    class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr] cursor-pointer"
+                >Log Out</p>
+            </div>
+        </nav>
+*/
 
