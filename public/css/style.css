@@ -147,53 +147,58 @@ html, body {
 */
 
 /* navbar jika selain index dan belum login
-<nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0">
+<nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0 fixed">
     <a href="/public/index.html">
         <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
             <div class="w-20">
-                <img src="images/butel-logo.png" alt="" class="w-full h-full">
+                <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
             </div>
             <div>
-                <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span class="text-[var(--secondary-red)]">TEL</span></p>
+                <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span
+                        class="text-[var(--secondary-red)]">TEL</span></p>
             </div>
         </div>
     </a>
-    
-    <div class="flex items-center justify-between mr-[20px] w-[150px]">
-        <a
-            class="inline-block rounded-full border border-[var(--secondary-red)] px-[10px] py-[4px] font-[Ntr]"
-            href="pages/login.html"
-        >Login</a>
-        <a
-            class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr]"
-            href="pages/sign_up.html"
-        >Sign Up</a>
+        
+    <div class="flex items-center justify-between mr-[20px] w-[200px]">
+        <div>
+            <a href="/public/pages/list_buku.html" class="font-[Ntr] text-xl text-white bg-[var(--secondary-red)] px-[10px] py-[1px] rounded-md">BUKU</a>
+        </div>
+        <p class="inline-block rounded-full border border-[var(--secondary-red)] p-[6px] font-[Ntr] bg-[var(--secondary-red)] cursor-pointer">
+            <img src="/public/images/profile.png" alt="" class="w-[30px] h-[30px]">
+        </p>
+        <p class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr] cursor-pointer">
+            Log Out
+        </p>
     </div>
 </nav>
 */
 
 /* navbar jika selain index dan sudah login
 <nav class="flex h-[100px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.5)] items-center justify-between bg-white right-0 left-0">
-            <a href="/public/index.html">
-                <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
-                    <div class="w-20">
-                        <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
-                    </div>
-                    <div>
-                        <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span class="text-[var(--secondary-red)]">TEL</span></p>
-                    </div>
-                </div>
-            </a>
-
-            <div class="flex items-center justify-between mr-[20px] w-[150px]">
-                <p
-                    class="inline-block rounded-full border border-[var(--secondary-red)] p-[6px] font-[Ntr] bg-[var(--secondary-red)] cursor-pointer"
-                >
-                <img src="/public/images/profile.png" alt="" class="w-[30px] h-[30px]"></p>
-                <p
-                    class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr] cursor-pointer"
-                >Log Out</p>
+    <a href="/public/index.html">
+        <div class="flex w-[270px] h-[100px] items-center justify-between ml-[20px] ">
+            <div class="w-20">
+                <img src="/public/images/butel-logo.png" alt="" class="w-full h-full">
             </div>
-        </nav>
+            <div>
+                <p class="text-[var(--primary-grey)] text-7xl font-[oswald] stroke-text">BU<span
+                        class="text-[var(--secondary-red)]">TEL</span></p>
+            </div>
+        </div>
+    </a>
+        
+    <div class="flex items-center justify-between mr-[20px] w-[200px]">
+        <div>
+            <a href="/public/pages/list_buku.html" class="font-[Ntr] text-xl text-white bg-[var(--secondary-red)] px-[10px] py-[1px] rounded-md">BUKU</a>
+        </div>
+        <p class="inline-block rounded-full border border-[var(--secondary-red)] p-[6px] font-[Ntr] bg-[var(--secondary-red)] cursor-pointer">
+            <img src="/public/images/profile.png" alt="" class="w-[30px] h-[30px]">
+        </p>
+        <p class="inline-block rounded-full border border-transparent bg-[var(--secondary-red)] px-[10px] py-[4px] text-white font-[Ntr] cursor-pointer">
+            Log Out
+        </p>
+    </div>
+</nav>
 */
 
